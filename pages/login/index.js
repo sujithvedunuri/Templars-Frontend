@@ -17,7 +17,6 @@ export default function Login() {
         console.log("password", password)
         const requestOptions ={
             method: 'POST',
-            mode: 'no-cors',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: JSON.stringify({ username: username, password : password })
         };
