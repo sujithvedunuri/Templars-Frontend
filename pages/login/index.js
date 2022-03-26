@@ -65,7 +65,7 @@ const StyledButton = styled.button`
 `
 
 export default function Login() {
-    const [user_name, setUserName] = useState("default")
+    const [username, setUserName] = useState("default")
     const [password, setPassword] =useState("default")
     const UserNameHandler =(event) =>{
         setUserName(event.target.value)
@@ -75,12 +75,13 @@ export default function Login() {
     }
     const SubmitHandler = (e)=>{
         e.preventDefault()
-        console.log("user_name", user_name)
+        console.log("username", username)
         console.log("password", password)
         const requestOptions ={
             method: 'POST',
+            mode: 'no-cors',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: JSON.stringify({ user_name: user_name, password : password })
+            body: JSON.stringify({ username: username, password : password })
         };
         const datafetch = async ()=>{
             const response = await fetch('http://localhost:8080/login',requestOptions);
