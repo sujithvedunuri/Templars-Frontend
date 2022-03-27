@@ -1,7 +1,6 @@
 import { CSVLink} from 'react-csv'
 import { CsvButton } from '../../styles/csvStyles';
 
-
 export default function Csv() {
     const ass_name = "Kakashi"
     const data = [
@@ -20,8 +19,8 @@ export default function Csv() {
             manager:"edit",
             issuer_name:"edit",
             issuer_id:"edit"
-        },
-    ];
+        }
+    ]
 
     const headers = [
         {
@@ -70,9 +69,10 @@ export default function Csv() {
 
 
   return (
+    <div>
     <CsvButton>
     <CSVLink data={data} headers={headers} filename={"Template.csv"}>Download</CSVLink>
     </CsvButton>
+    </div>
   )
 }
-
