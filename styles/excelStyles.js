@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CsvButton = styled.button`
+export const ExcelButton = styled.button`
 display: block;
 background: linear-gradient(to top,lightblue , #e1eec3);
 color: #fff;
